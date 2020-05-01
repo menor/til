@@ -63,3 +63,10 @@ I had the problem of postgres crashing with some weird error. To debug I did the
 
 ### Update postgres data
 - To update data from previous postgres installations you can run `brew postgresql-upgrade-database` and the data will be migrated to the new version
+
+## Productivity
+
+### Theory of Constraints
+The Theory of Constraints is a way to identify the most important limitng factor (the constraint) that stands in the way of achieving a goal. And systematically improve that constraint until it is no longer the limiting factor.
+### Tips
+- Setting a cadence for fixing bugs (i.e. biweekly) could help with improving the codebase
