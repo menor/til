@@ -37,6 +37,44 @@ The file will be compiled in memory and run in the Erlang Virtual Machine
 - If you are not interested in a value you can use the underscore `_` to match anything 
 - To concatenate strings we use the `<>` operator, so we can also pattern match strings by doing `"/bear/" <> id = "/bear/1"` `1` will be binded to `id`
 
+## Error Handling
+- Many methods in elixir return an tuple with two o rmore elements, the first one being `:ok` or `:err` we can then pattern match on those to handle errors:
+```elixir
+    def route(%{ method: "GET", path: "/about" <> id } = conv) do
+        case File.read("../../pages/about.html") do
+            {:ok, content} ->
+                %{ conv | status: 200, resp_body: content} 
+
+            {:error, reason} ->
+                %{ conv | status: 500, resp_body: "File error: #{reason}"} 
+        end
+        %{ conv | status: 200, resp_body: "File"}
+    end
+```
+
+- Maybe it's better to design that conditional using clause functions:
+```elixir
+    def route(%{ method: "GET", path: "/about" } = conv) do
+        file =
+            Path.expand("../../pages", __DIR__)
+            |> Path.join("about.html")
+            |> File.read
+            |> handle_file(conv)
+    end
+
+    def handle_file({:ok, content}, conv) do
+        %{ conv | status: 200, resp_body: content} 
+    end
+
+    def handle_file({:error, :enoent}, conv) do
+        %{ conv | status: 404, resp_body: "File not found"} 
+    end
+
+    def handle_file({:error, reason}, conv) do
+        %{ conv | status: 500, resp_body: "File error: #{reason}"} 
+    end
+```
+
 ## IEX
 - You can also use `iex` as a REPL
 - Once inside iex to compile (and run) a module use `c "<module-path>"` the module will be run and made available
@@ -77,3 +115,16 @@ end
 
 - You can create functions that are private to a module by using `defp` instead of `dev`
 
+## Regular Expressions
+- Here's how to define a regular expression literal in Elixir `~r{regexp}`
+- The ~r is called a sigil and the braces { } are delimiters for the regular expression itself.
+- Example regex: `regex = ~r{\/(\w+)\?id=(\d+)}` it matches a literal / character followed by one or more word characters, followed by the literal `?id=` followed by one or more digits.
+- The match method on the Regex module will return a boolean
+- We can capture matching values in a regular expression like this: `regex = ~r{\/(?<thing>\w+)\?id=(?<id>\d+)}`
+- Notice we added ?<thing> before the word characters and ?<id> before the digit characters. This says we want to capture the word characters as thing and the digit characters as id.
+- Now we can call the named_captures function which returns the given captures as a map: 
+```elixir
+Regex.named_captures(regex, path)
+%{"id" => "1", "thing" => "bears"}
+```
+- If no captures are found it will return `nil`
