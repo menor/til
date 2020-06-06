@@ -52,6 +52,8 @@ The file will be compiled in memory and run in the Erlang Virtual Machine
 - We can use pattern matching to check values or extract them 
 - If you are not interested in a value you can use the underscore `_` to match anything 
 - To concatenate strings we use the `<>` operator, so we can also pattern match strings by doing `"/bear/" <> id = "/bear/1"` `1` will be binded to `id`
+- The cons operator can pattern match the first element of a list and the rest of them like this `[head | tail] = [1, 2, 3, 4, 5]` then `head`  will have the value `1` and tails will have `[2, 3, 4, 5]`
+- We can continue calling it until there's only one value left, then the head will be the value, and tail will be an empty list
 
 ## Error Handling
 - Many methods in elixir return an tuple with two o rmore elements, the first one being `:ok` or `:err` we can then pattern match on those to handle errors:
@@ -167,3 +169,6 @@ end
 `conv = %Servy.Conv{}` if we want to override defaults `conv = %Servy.Conv{method: "GET", path: "/bears"}`
 - The type constraint is checked at compile time
 - We can use dot notation `conv.path` to access key from a struct, not the square brackets `conv[:path]`
+
+## Parsing requests
+We can use `URI.decode_query` to get an map of key values from the request body, in this map the keys are strings not atoms. It's not a good idea to convert these into atoms, cause this takes data from users and atoms are not garbage collected.
