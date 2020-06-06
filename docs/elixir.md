@@ -16,6 +16,22 @@ To run an elixir file you can do:
     - `elixir <file-path>`
 The file will be compiled in memory and run in the Erlang Virtual Machine
 
+## Modules
+- Modules can have attributtes
+- Module attributes are defined at the top level
+- You can use attributes to store metadata about the module
+- i.e. `@moduledoc` to document the module documentation
+- `@doc` documents the function underneath
+- We can use module attributes as constants
+- It's best to declare the attributes first thing in the file, since they are bound at compile time
+- A single elixir file can define multiple modules
+- All modules are defined at top level, using dots in the name is just a convenient way to namespace `App.Module`
+- To call other module functions in a module you can:
+    - Call them including the module name `App.Module.function`
+    - Import the module `import App.Module` and `function` will be available (it imports the entire module)
+    - Import only the functions we need by using only: `import App.Module, only: [function]`
+
+
 ## Atoms as Map Keys
 - Elixir atoms are prefixed by a colon. I.E.
  `%{ :method => "GET", :path => "/wildthings" }`
@@ -128,3 +144,26 @@ Regex.named_captures(regex, path)
 %{"id" => "1", "thing" => "bears"}
 ```
 - If no captures are found it will return `nil`
+
+## Structs
+- Maps are generic data structures, a struct provides more structure
+- We define a struct in its own module (only one struct per module)
+```elixir
+defmodule Servy.Conv do
+    defstruct [ method: "", path: ""]
+end
+```
+
+- `method` and `path` are the key names, and the empty strings are the default values
+- Since the array is the only argument to defstruct, we can remove the square brackets:
+```elixir
+defmodule Servy.Conv do
+    defstruct method: "", path: ""
+end
+```
+- We can create maps like this `map = %{}`
+
+- To create a struct we need to give the name of the struct:
+`conv = %Servy.Conv{}` if we want to override defaults `conv = %Servy.Conv{method: "GET", path: "/bears"}`
+- The type constraint is checked at compile time
+- We can use dot notation `conv.path` to access key from a struct, not the square brackets `conv[:path]`
