@@ -55,6 +55,10 @@ The file will be compiled in memory and run in the Erlang Virtual Machine
 - The cons operator can pattern match the first element of a list and the rest of them like this `[head | tail] = [1, 2, 3, 4, 5]` then `head`  will have the value `1` and tails will have `[2, 3, 4, 5]`
 - We can continue calling it until there's only one value left, then the head will be the value, and tail will be an empty list
 
+## Guards
+- We can add guards to a function so it will only run when cerain conditions match. i.e.
+`def get_storm(id) when is_integer(id) do ... end` will only run if the id is an integer and will throw an error if not
+
 ## Error Handling
 - Many methods in elixir return an tuple with two o rmore elements, the first one being `:ok` or `:err` we can then pattern match on those to handle errors:
 ```elixir
@@ -98,7 +102,8 @@ The file will be compiled in memory and run in the Erlang Virtual Machine
 - Once inside iex to compile (and run) a module use `c "<module-path>"` the module will be run and made available
 - You can also do `iex <module-path>` to start iex with the module available
 - `iex -S mix` will compile and make available all the modules in the project
-- To recompile inside iex you can run `r <module-name>`
+- To recompile inside iex you can run `recompile()`
+- To execute a module inside iex you can run `r <module-name>`
 - You can see methods available in an object i.e. `h String.` (then hit Tab to see available methods)
 
 ## Logging
@@ -132,6 +137,15 @@ end
 ```
 
 - You can create functions that are private to a module by using `defp` instead of `dev`
+- Another way to shorten functions specially when piping is the capture syntax so you can turn this `Enum.sort(fn(b1, b2) -> Storm.order(b1, b2) end)` into `Enum.sort(&Storm.order(&1, &2))`
+- You can make this even shorter by replacing the references at the end by the arity of the function you want to invoke `Enum.sort(&Storm.order/2)`
+- You can also use the & operator to capture expressions. From `Enum.map([1,2,3], fn(x) -> x * 3 end)` to `Enum.map([1,2,3], &(&1 * 3))`
+- The result of `&(&1 * 3)` is an anonymous function
+- Alternatively, you can capture the expression as an anonymous function, bind it to a variable, and then pass the function to the higher-order map function:
+```elixir
+triple = &(&1 * 3)
+Enum.map([1,2,3], triple)
+```
 
 ## Regular Expressions
 - Here's how to define a regular expression literal in Elixir `~r{regexp}`
