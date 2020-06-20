@@ -186,3 +186,28 @@ end
 
 ## Parsing requests
 We can use `URI.decode_query` to get an map of key values from the request body, in this map the keys are strings not atoms. It's not a good idea to convert these into atoms, cause this takes data from users and atoms are not garbage collected.
+
+## Templates
+- Templates use the `eex` extension
+- You can use `<=% inspect(object) =>` to output the results from an object as a string
+
+## Comprehensions
+- Seem powerful but didn't quite get how they work, do more research on them.
+
+## Tests
+- You can run a specific test like this `mix test test/my_test.exs`. You can also pass multiple paths at the end to run several tests.
+- You can run all the tests at once with `mix test` It will run all the tests in the `test` directory.
+- Sometimes you just want to run a test you can do that by passing the line number where the test you want to run is located `mix test test/my_test.exs:7` (You can geet the line number from the message you get from a failing test)
+- By default, ExUnit executes each test case (test file/module) serially. Thus, as the number of test cases increases, so does the time it takes to execute those tests. You can speed up the execution of multiple test cases by running them concurrently rather than serially. To allow a test case to run concurrently, simply set the async option to true on this existing line: `Use ExUnit.Case, async: true`
+- It's important to note that individual tests within the test case are always run serially.
+- There are two ways to run Doctests:
+    - By adding this line into the module `doctest <APPNAME>.<MODULE_NAME>` 
+    - By defining a new test file to aggregate all the Doctests
+    ```elixir
+        defmodule DocTest do
+            use ExUnit.Case
+            doctest <APPNAME>.<MODULE_1>
+            doctest <APPNAME>.<MODULE_2>
+            doctest <APPNAME>.<MODULE_3>
+        end
+    ```
