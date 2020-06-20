@@ -23,3 +23,19 @@ If you have the [vim-surround](https://github.com/tpope/vim-surround) plugin ins
 - `:windo difft` will show the diff between two windows
 - `:e!` discards edits since last save and reloads the file
 - `]m` moves to the next curly brace
+
+### Splits
+To move between splits:
+- `ctrl-w j` moves to the top split
+- `ctrl-w h` moves to the left split
+- `ctrl-w k` moves to the bottom split
+- `ctrl-w l` moves to the right split
+
+Once you have split your screen, how can you rearrange your splits? It’s easy with ctrl-w:
+
+- `ctrl-w J` moves the active to the top
+- `ctrl-w H` moves the active split to the left
+- `ctrl-w K` moves the active split to the bottom
+- `ctrl-w L` moves the active split to right
+- `ctrl-w r` rotates splits to the right/down
+- `ctrl-w R` rotates splits to the left/up
