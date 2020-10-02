@@ -146,6 +146,7 @@ end
 triple = &(&1 * 3)
 Enum.map([1,2,3], triple)
 ```
+- Functions in Elixir act as closures. When a function is defined, it "closes around" the bindings of variables in the scope in which the function was defined. (same as Javascript)
 
 ## Regular Expressions
 - Here's how to define a regular expression literal in Elixir `~r{regexp}`
@@ -211,3 +212,29 @@ We can use `URI.decode_query` to get an map of key values from the request body,
             doctest <APPNAME>.<MODULE_3>
         end
     ```
+
+## Monitoring
+- You can open erlang monitoring from iex by using the `observer` erlang module with `:observer.start()`
+
+## Processes
+You can spawn a process with an anonymous function `pid = spawn(fn -> Servy.HttpServer.start(4000) end)` or with a named function by passing three arguments (name of the module, name of the method and a list of arguments) `pid = spawn(Servy.HttpServer, :start, [4000])`
+- `spawn` returns a PID id
+- Each process has a message queue where we can send messages using `send(parent_pid, message)` messages can be anything but it is normal to use a tuple in the form `{:result, message}`
+- Inside the PID we can use `receive` to listen for messages sent to that process and then pattern match, i.e.
+```
+message = receive do
+    {:result, message} -> message
+end
+```
+- The messages will remain in a process message queue until we explicitly `receive` them or we terminate the process.
+- We can also use `flush()` to empty a process queue
+- This is known as the actor model of concurrency
+- If we call `receive` and there are no messages in the queue, the current process will suspend until a matching message arrives
+- The queue is FIFO
+
+- `Process.list |> Enum.count` in iex will give you the number of current running processes
+- You can also use the Erlang module `system_info` `:erlang.system_info(:process_count)`
+- There's a lot of info you can get from `erlang.system_info()
+- You can also spawn processess from iex, i.e. a server that does not block the current session) like this `spawn(ModuleName, :method, [list_of_arguments])`
+- You can get the PID of a process by calling `self()`
+- You can get info about a process using `Process.info(PID)`
