@@ -11,7 +11,7 @@
 - [VIM](./docs/vim.md)
 - [Svelte](./docs/svelte.md)
 - [Javascript](./docs/javascript.md)
-- [React](./docs/react.md)
+- [React](./docs/react/index.md)
 
 ## Books
 - [Making Work Visible](./books/making-work-visible.md)
