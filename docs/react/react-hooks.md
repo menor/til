@@ -105,6 +105,16 @@ ReactDOM.render(
 
 - Context does not need to be globally available. Keeping a context value scoped to the area that needs it most has improved performance and maintainability characteristics.
 
+## useLayoutEffect
+- `UseLayoutEffect` runs before React renders (think `componentWillMount`).
+- `UseEffect` runs after React has rendered (think `componentDidMount`).
 
+- If your effect is mutating the DOM (via a DOM node ref) and the DOM mutation will change the appearance of the DOM node between the time that it is rendered and your effect mutates it, then you don't want to use `useEffect`. You'll want to use `useLayoutEffect`. Otherwise the user could see a flicker when your DOM mutations take effect. This is pretty much the only time you want to avoid `useEffect` and use `useLayoutEffect` instead. 
+
+- This runs synchronously immediately after React has performed all DOM mutations. This can be useful if you need to make DOM measurements (like getting the scroll position or other styles for an element) and then make DOM mutations or trigger a synchronous re-render by updating state
+ 
+- When to choose one:
+  - `useLayoutEffect`: If you need to mutate the DOM with notable effects to the user and/or do need to perform measurements
+  - `useEffect`: If you don't need to interact with the DOM at all or your DOM changes are unobservable (seriously, most of the time you should use this).
 
 
