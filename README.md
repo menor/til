@@ -10,6 +10,8 @@
 - [Productivity](./docs/productivity.md)
 - [VIM](./docs/vim.md)
 - [Svelte](./docs/svelte.md)
+- [Javascript](./docs/javascript.md)
+- [React](./docs/react.md)
 
 ## Books
 - [Making Work Visible](./books/making-work-visible.md)
