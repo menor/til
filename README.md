@@ -9,6 +9,7 @@
 - [Postgres](./docs/postgres.md)
 - [Productivity](./docs/productivity.md)
 - [VIM](./docs/vim.md)
+- [Svelte](./docs/svelte.md)
 
 ## Books
 - [Making Work Visible](./books/making-work-visible.md)
