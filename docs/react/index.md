@@ -2,6 +2,7 @@
 
 - [React Hooks](./react-hooks.md)
 - [Error handling in React](./react-errors.md)
+- [Testing async components](./react-testing-async.md)
 
 ## Basic React
 - Passing a key to an array (different than an index or a random thing) it’s really important cause it helps React keep track of what element of the array it snapped to what element in the DOM
