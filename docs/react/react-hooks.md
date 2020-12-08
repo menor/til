@@ -117,4 +117,14 @@ ReactDOM.render(
   - `useLayoutEffect`: If you need to mutate the DOM with notable effects to the user and/or do need to perform measurements
   - `useEffect`: If you don't need to interact with the DOM at all or your DOM changes are unobservable (seriously, most of the time you should use this).
 
+## useImperativeHandle
+- The normal use for this is when you want to allow parents to focus on child components using refs.
+- Use with caution, prefer declarative to imperative
+- It involves a pretty convoluted use of `React.forwardRef`, so better to check how to do it when needed
+
+## useDebugValue
+- Used for React Dev Tools browser extension
+- Imagine you are calling a hook several times, and you want to track which one is running, you can call `useDebugValue` inside your hook and pass to it values (just like console.log) this values will show on React Dev Tools when the component is selected.
+- It only works inside hooks, not inside components
+- `useDebugValue` accepts a formatting function as an optional second parameter. This function is only called if the Hooks are inspected. It receives the debug value as a parameter and should return a formatted display value. (use this if calculating the default value is expensive, if not it's better not to use it, since it would be more expensive to create the function).
 
