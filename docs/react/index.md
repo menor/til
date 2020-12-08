@@ -1,6 +1,7 @@
 # React
 
 - [React Hooks](./react-hooks.md)
+- [Advanced React Patterns](./react-advanced-patterns.md)
 - [Error handling in React](./react-errors.md)
 - [Testing async components](./react-testing-async.md)
 
