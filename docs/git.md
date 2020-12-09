@@ -48,3 +48,6 @@ This works like a charm for when you have a lot of commits to rebase and some of
 `git branch -D temp`
 
 That's all. We did a rebase via hidden merge.
+
+## Git checkout
+- To go to the previous branch you were before you can do `git checkout -`
