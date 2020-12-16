@@ -15,6 +15,14 @@ If you have the [vim-surround](https://github.com/tpope/vim-surround) plugin ins
 - `*` search forward for word under the cursor
 - `#` search backward for word under the cursor
 
+- To move through the Jumplist (each position to which your cursor jumped):
+  - `ctrl-o` to move backwards 
+  - `ctrl-i` to move forwards
+
+- To move through Changelist (the position for every change you can undo):
+  - `g;` to move backwards 
+  - `g,` to move forwards
+
 ### Marks
 - `m{a-zA-Z}` sets a custom mark whose exact location can be accessed using `{mark}
 - Certains marks are special `. jumps to the last change
