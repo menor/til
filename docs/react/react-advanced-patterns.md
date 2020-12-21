@@ -11,3 +11,4 @@
 ## Patterns
 - [Context Module Functions](./context-module-functions.md)
 - [Compound Components](./compound-components.md)
+- [Flexible Compound Components](./flexible-compound-components.md)
