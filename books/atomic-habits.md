@@ -105,4 +105,28 @@
 ## 3. Make it Easy
 
 ### Walk slowly but never backward
+- The best is the enemy of the good
+- Motion makes you feel you are getting things done, but really, you're just preparing to get something done.
+- When preparation becomes a form of procastrination, you need to change something. You don't want to merely be planning, you want to be practicing.
+- If you want to master a habit start with repetition, not perfection.
+- Habit formation is the process by which a behavior becomes progressively more automatic through repetition.
+- The amount of time you have been performing a habit is not as important as the number of times you have performed it.
+
+### The law of least effort
+- Every action requires a certain amount of energy. The more energy required, the less likely it is to occur.
+- In a sense, every habit is just an obstacle to getting what you really want.
+- What you really want is the outcome the habit delivers. The greater the obstacle, that is the more difficult the habit, the more friction there is between you and your desired end state.
+- This is why it's crucial to make your habits so easy that you'll do them even when you don't feel like it.
+- Create an environment where doing the right thing is as easy as possible.
+- Reduce the friction associated with good behaviors and increase the friction associated with bad behaviors.
+- Prime your environment to make future actions easier.
+
+### The two minute rule
+- Many habits occur at decisive moments, choices taht are like a fork in the road, and either send you in the direction of a productive day or an unproductive one.
+- When you start a new habit it should take less than two minutes to do.
+- The more you ritualize the beginning of a process, the more likely it becomes that you can slip into the state of deep focus that is required to do great things.
+- Standarize before you optimize. You can't improve a habit that doesn't exist.
+
+### How to make good habits inevitable and bad habits impossible
+
 
