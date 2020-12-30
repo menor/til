@@ -128,5 +128,40 @@
 - Standarize before you optimize. You can't improve a habit that doesn't exist.
 
 ### How to make good habits inevitable and bad habits impossible
+- The best way to break a bad habit is to make it impractical to do. Increase the friction until you don't even have the option to act.
 
+
+## 4. Make It Satisfying
+### The cardinal rule of behavior change
+- The human brain evolved to prioritize immediate rewards over delayed rewards.
+- The Cardinal Rule of Behavior Change: What is immediately rewarded is repeated. What is immediatel punished is avoided.
+- To make a good habit stick you need to make it immediately successful, even if it's in a small way.
+- The first three laws increase the odds that a behavior will be performed the first time, the fourth law increases the odds that a behavor will be repeated next time.
+
+### How to stick with good habits every day
+- Tracking a habit gives you the satisfying feeling of making progress.
+- A habit tracker is a simple way to measure whether you did a habit, like marking an X on a calendar.
+- Don't break the chain, try to keep your habit streak alive.
+- Never miss twice.
+
+### Accountability partners
+- An accountability partner can create an immediate cost to inaction. We care deeply about what others think of us.
+- A habit contract can be used to add a social cost to anybehavior. It makes the costs of violating your promises public and painful.
+
+## Advanced tactics
+- The secret to maximizing your odds of success is to choose the right field of competition.
+- Pick the right habit and progress is easy. Pick the wrong habit and life is a struggle.
+- Genes cannot be changed, they give you advantages in certain circumstances and disadvantages in other circumstances.
+- Habits are easier when they align with your natural habilities.
+- Play a game that favors your strengths. If you can't find a game like that, create it.
+- Genes do not eliminate the need for hard work. They tell us what to work hard on.
+
+### How to stay motivated
+- The goldilocks rule states that humas experience peak motivation when working on tasks that are right on the edge of their current habilities.
+- The greatest threat to success is not failure, but boredom
+- As habits become routine, they become less interesting and satisfying. We get bored.
+- Anyone can work hard when they feel motivated. It's the ability to keep going when work isn't exciting that makes the difference.
+- Professionals stick to the schedule; amateurs let life get in the way.
+
+### The downside of creating good habits
 
