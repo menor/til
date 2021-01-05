@@ -164,4 +164,16 @@
 - Professionals stick to the schedule; amateurs let life get in the way.
 
 ### The downside of creating good habits
+- The downside of habits is that we stop paying attention to little errors.
+- Improvement is not just about learning habits it's also about fine-tuning them.
+- Reflection and review are necessary to ensure that you spend your time on the right things.
+- Each December perform an annual review:
+	- What went well last year?
+	- What didn't go so well this year?
+	- What did I learn?
+- In Summer an integrity report, to reflect in the kind of person you want to be:
+	- What are the core values that drive my life  and work?
+	- How am I living and working with integrity right now?
+	- How can I set a higher standard in the future?
+- Keep your integrity small. The more you let a single belief define you, the less capable you are of adapting when life challenges you.
 
