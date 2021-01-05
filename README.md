@@ -6,6 +6,7 @@
 - [Firefox](./docs/firefox.md)
 - [GIT](./docs/git.md)
 - [Homebrew](./docs/homebrew.md )
+- [Peopleware](./docs/peopleware.md)
 - [Postgres](./docs/postgres.md)
 - [Productivity](./docs/productivity.md)
 - [VIM](./docs/vim.md)
