@@ -14,6 +14,7 @@
 - [Javascript](./docs/javascript.md)
 - [React](./docs/react/index.md)
 - [Golang](./docs/golang/index.md)
+- [Rust](./docs/rust.md)
 
 ## Books
 - [Making Work Visible](./books/making-work-visible.md)
