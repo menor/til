@@ -51,3 +51,6 @@ That's all. We did a rebase via hidden merge.
 
 ## Git checkout
 - To go to the previous branch you were before you can do `git checkout -`
+
+## Alternative to rebase -i
+I usually commit often locally and push to remote right away. Then when I want to open up my PR, I use `git reset --soft <target>` where target is the local version of the target branch in my PR. That resets all the commits, but keeps all the changes in the staging area, and then I can clean up my history. Then I force push to override what's there. [source](https://news.ycombinator.com/item?id=29787081)
