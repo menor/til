@@ -6,7 +6,14 @@ If you have the [vim-surround](https://github.com/tpope/vim-surround) plugin ins
 - To delete surrounding delimiters `ds(` (Will remove surrounding parentheses)
 
 ### Brackets
-- `b` is a text object for a bracket so you can do things like `dab` to delete around parrenthesis instead of `da(`, `dib` to delete inside, `cib` to change inside and so on ...
+- `b` is a text object for a bracket so you can do things like `dab` to delete around parenthesis instead of `da(`, `dib` to delete inside, `cib` to change inside and so on ...
+
+### Insert Mode
+- `I` moves to the start of the line and enters insert mode
+- `A` moves to the end of the line and enters insert mode
+- `x` deletes a single character
+- `s` deletes a single character and goe into insert mode
+- `c` is like `d` but enters insert mode after it deletes the selection
 
 ### Navigation
 - `{count} +` moves count lines down to the beggining of the line
@@ -14,6 +21,16 @@ If you have the [vim-surround](https://github.com/tpope/vim-surround) plugin ins
 - `gd` go to local declaration
 - `*` search forward for word under the cursor
 - `#` search backward for word under the cursor
+- `f` searchs forward in a line
+- `F` searchs backwards in a line
+- `;` move forwards to next search result in the line
+- `,` move backwards to next search result in the line
+- `:<line number>` moves you to a specific line number (same as `<line number>G`)
+- `}` moves to the next blank line
+- `{` moves to the previous blank line
+- `Ctrl + u` moves half screen up
+- `Ctrl + d` moves half screen down
+- `%` goes to matching bracket or parenthesis
 
 - To move through the Jumplist (each position to which your cursor jumped):
   - `ctrl-o` to move backwards 
