@@ -9,6 +9,7 @@
 - [Peopleware](./docs/peopleware.md)
 - [Postgres](./docs/postgres.md)
 - [Productivity](./docs/productivity.md)
+- [Programming](./docs/programming.md)
 - [VIM](./docs/vim.md)
 - [Svelte](./docs/svelte.md)
 - [Javascript](./docs/javascript.md)
