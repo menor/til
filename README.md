@@ -4,6 +4,7 @@
 - [Bash](./docs/bash.md)
 - [Elixir](./docs/elixir.md)
 - [Firefox](./docs/firefox.md)
+- [Frontend](./docs/frontend.md)
 - [GIT](./docs/git.md)
 - [Homebrew](./docs/homebrew.md )
 - [Peopleware](./docs/peopleware.md)
