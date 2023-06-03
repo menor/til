@@ -64,3 +64,16 @@ Once you have split your screen, how can you rearrange your splits? It’s easy 
 - `ctrl-w L` moves the active split to right
 - `ctrl-w r` rotates splits to the right/down
 - `ctrl-w R` rotates splits to the left/up
+
+## Plugins
+
+### Comment.nvim
+- `gcc` comments line using line comment syntax
+- `gbc` comments line using block comment syntax
+- `gc[count]{motion}` line comment the region contained in {motion}
+- `gb[count]{motion}` block comment the region contained in {motion}
+
+- `gco` puts you in insert mode in a comment line below
+- `gcO` puts you in insert mode in a comment line above
+- `gcA` puts you in insert mode at the end of the line
+

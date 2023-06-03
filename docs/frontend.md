@@ -7,3 +7,8 @@ For serif, I recommend at most three items, possibly including one named font: a
 For monospace, I recommend at most four: a web font, ui-monospace (I wouldn’t, but some macOS people prefer it), Consolas, and monospace. I think Consolas is worth keeping in until Firefox updates its Windows default (https://bugzilla.mozilla.org/show_bug.cgi?id=713680), because Courier New is that bad.
 reply
 
+## Tools
+- [Spectral](http://jxnblk.github.io/Spectral/) Tool by Brent Jackson to generate shades and tints for colors.
+- [colors.cc](http://clrs.cc) Provides more pleasant alternatives to the default HTML palette.
+- [ColorSpace](https://mycolor.space) Palette generator.
+
